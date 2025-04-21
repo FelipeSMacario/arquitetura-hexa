@@ -1,0 +1,7 @@
+CREATE TABLE address(
+ id CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+    city VARCHAR(100) NOT NULL,
+    uf VARCHAR(100) NOT NULL,
+    event_id CHAR(36),
+    FOREIGN KEY (event_id) REFERENCES event(id) ON DELETE CASCADE
+);
